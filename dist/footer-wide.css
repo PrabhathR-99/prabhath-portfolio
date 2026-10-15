@@ -1,0 +1,22 @@
+/* Full-bleed portrait with dedicated contrast scrims under the side columns. */
+.portrait-footer[data-wide-footer]{background:#101f2c;color:#f2f5f2;padding-top:80px}
+.portrait-footer[data-wide-footer] .portrait-footer-photo{position:absolute;inset:0;z-index:-1;margin:0;width:100%;height:100%;min-height:0;overflow:hidden;-webkit-mask-image:none;mask-image:none}
+.portrait-footer[data-wide-footer] .portrait-footer-photo img{inset:0;width:100%;height:100%;object-fit:cover;object-position:48% 35%;-webkit-mask-image:none;mask-image:none;transform:translateY(var(--footer-photo-shift,0px)) scale(1.04)}
+.portrait-footer[data-wide-footer]:before{z-index:0;background:linear-gradient(90deg,#101f2cf0 0%,#101f2ce6 22%,#101f2caa 33%,#101f2c26 43%,#101f2c26 53%,#101f2ce6 65%,#101f2cf0 100%),linear-gradient(0deg,#101f2c 0%,#101f2cd9 13%,transparent 50%,#101f2c33 100%)}
+.portrait-footer[data-wide-footer] .portrait-footer-grid{grid-template-columns:.85fr 1.25fr 1.25fr;min-height:590px;align-items:start}
+.portrait-footer[data-wide-footer] .portrait-footer-links{grid-column:1;grid-row:1}
+.portrait-footer[data-wide-footer] .portrait-footer-copy{grid-column:3;grid-row:1}
+.portrait-footer[data-wide-footer] h2,.portrait-footer[data-wide-footer] .portrait-footer-connect>span,.portrait-footer[data-wide-footer] .portrait-footer-legal{color:#c2d0d4}
+.portrait-footer[data-wide-footer] .portrait-footer-legal{border-top-color:#f2f5f233}
+.portrait-footer[data-wide-footer] .portrait-footer-star{color:#ffa33d}
+.portrait-footer[data-wide-footer] .portrait-footer-links a:hover,.portrait-footer[data-wide-footer] .portrait-footer-legal a:hover{color:#ffa33d}
+.portrait-footer[data-wide-footer] .portrait-footer-cta{color:#101f2c;background:#ffa33d}
+.portrait-footer[data-wide-footer] .portrait-footer-marquee{z-index:2;color:#f2f5f2;background:linear-gradient(180deg,#101f2c80,#101f2cf2);padding-top:32px}
+.portrait-footer[data-wide-footer] .portrait-footer-track i{color:#ffa33d}
+.portrait-footer[data-wide-footer] a:focus-visible{outline-color:#ffa33d}
+@media(max-width:1000px){.portrait-footer[data-wide-footer] .portrait-footer-grid{grid-template-columns:.9fr 1fr 1.25fr}.portrait-footer[data-wide-footer]:before{background:linear-gradient(90deg,#101f2cf2 0%,#101f2ce6 25%,#101f2c44 40%,#101f2c33 50%,#101f2ce6 62%,#101f2cf2 100%),linear-gradient(0deg,#101f2c 0%,transparent 55%)}}
+@media(max-width:760px){.portrait-footer[data-wide-footer]{--footer-photo-height:clamp(240px,43vw,340px);padding-top:calc(var(--footer-photo-height) + 32px)}.portrait-footer[data-wide-footer] .portrait-footer-photo{inset:0 0 auto;height:var(--footer-photo-height)}.portrait-footer[data-wide-footer] .portrait-footer-photo img{object-position:48% 30%;transform:scale(1.02)}.portrait-footer[data-wide-footer]:before{background:linear-gradient(180deg,transparent 0%,#101f2c22 calc(var(--footer-photo-height) - 100px),#101f2c var(--footer-photo-height));pointer-events:none}.portrait-footer[data-wide-footer] .portrait-footer-grid{grid-template-columns:1fr;min-height:0;gap:40px}.portrait-footer[data-wide-footer] .portrait-footer-links{grid-column:1;grid-row:1;display:grid;grid-template-columns:1fr 1fr;gap:32px 24px;padding-top:0}.portrait-footer[data-wide-footer] .portrait-footer-connect{margin-top:0}.portrait-footer[data-wide-footer] .portrait-footer-motto{grid-column:1/-1;margin:0}.portrait-footer[data-wide-footer] .portrait-footer-copy{grid-column:1;grid-row:2;padding-top:0}.portrait-footer[data-wide-footer] .portrait-footer-marquee{margin-top:32px;background:#101f2c}}
+@media(max-width:400px){.portrait-footer[data-wide-footer] .portrait-footer-links{gap:28px 16px}.portrait-footer[data-wide-footer] .portrait-footer-links a{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.portrait-footer[data-wide-footer] .portrait-footer-photo img{transform:none}}
+.portrait-footer[data-wide-footer] .portrait-footer-cta{background:var(--ds-button-bg);border-radius:var(--ds-button-radius)}
+.portrait-footer[data-wide-footer] .portrait-footer-cta:hover{background:var(--ds-button-hover)}

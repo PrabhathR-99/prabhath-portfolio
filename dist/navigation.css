@@ -1,0 +1,22 @@
+/* Frosted, tiled navigation inspired by the supplied reference. */
+.glass-nav{position:fixed;z-index:100;top:calc(18px + env(safe-area-inset-top,0px));left:0;right:0;padding:0 20px;pointer-events:none;transition:top .25s}
+.glass-bar{box-sizing:border-box;display:flex;align-items:stretch;gap:10px;width:max-content;max-width:100%;margin:auto;padding:10px;border-radius:24px;background:linear-gradient(135deg,#263c4db3,#101f2c99);border:1px solid #ffffff35;box-shadow:0 12px 40px #08152524,inset 0 1px 0 #ffffff26;backdrop-filter:blur(24px) saturate(130%);-webkit-backdrop-filter:blur(24px) saturate(130%);pointer-events:auto;font-family:var(--f-sans)}
+.glass-brand{display:flex;align-items:center;justify-content:center;flex-shrink:0;min-width:70px;padding:0 14px;border-radius:15px;background:#08152580;color:#ffffff;text-decoration:none;font-size:26px;font-weight:650;letter-spacing:-.08em}.glass-brand span{color:#ffa33d}
+.glass-links{display:flex;align-items:stretch;gap:8px;padding:4px;border-radius:18px;background:#08152522;border:1px solid #ffffff12}
+.glass-link{display:flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 20px;border:1px solid #ffffff20;border-radius:14px;text-decoration:none;color:#e8e7e3;font-size:15px;line-height:1.2;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.glass-link[aria-current=page]{color:#ffb65d;border-color:#ffa33d;background:#ffa33d0f}.glass-link:hover{background:#ffffff12;border-color:#ffffff55;transform:translateY(-1px)}
+.glass-contact{display:flex;align-items:center;justify-content:center;gap:9px;padding:0 22px;min-height:60px;border-radius:16px;background:#ffa33d;color:#101f2c;text-decoration:none;font-size:15px;white-space:nowrap;font-weight:600;transition:background .2s,transform .2s;box-shadow:inset 0 1px 0 #ffffff50}.glass-contact:hover{background:#ffb65d;transform:translateY(-1px)}
+.glass-bar a:focus-visible{outline:2px solid #ffa33d;outline-offset:4px}.glass-nav svg{flex-shrink:0}.glass-nav.compact{top:10px}
+body[data-page=work] #work,body[data-page=about] #about{padding-top:clamp(150px,14vw,190px)}
+.study-hero{padding-top:160px}
+@media(max-width:700px){.glass-nav{padding:0 12px;top:12px}.glass-bar{padding:7px;gap:6px;border-radius:20px}.glass-brand{min-width:44px;padding:0 8px;font-size:22px;border-radius:12px}.glass-links{gap:4px;padding:3px;border-radius:14px}.glass-link{min-height:44px;padding:0 11px;border-radius:10px}.glass-label{display:none}.glass-contact{min-height:50px;padding:0 13px;font-size:13px;border-radius:12px}.glass-contact svg{width:17px;height:17px}body[data-page=work] #work,body[data-page=about] #about{padding-top:120px}.study-hero{padding-top:125px}}
+@media(max-width:370px){.glass-link{padding:0 8px}.glass-contact{padding:0 10px;gap:6px}.glass-nav{padding-inline:8px}.glass-brand{min-width:38px}}
+@media(prefers-reduced-motion:reduce){.glass-bar a,.glass-nav{transition:none}}
+
+/* Icon-only page links, matching the compact glass navigation reference. */
+.glass-nav .glass-label{display:none}
+.glass-nav .glass-link{box-sizing:border-box;width:60px;min-width:60px;min-height:60px;padding:0;gap:0}
+.glass-nav .glass-link svg{width:24px;height:24px}
+.glass-nav .glass-link[aria-current=page]{color:#ffb65d;border-color:#ffffff55;background:#ffffff0c}
+@media(max-width:700px){.glass-nav .glass-link{width:44px;min-width:44px;min-height:44px}.glass-nav .glass-link svg{width:20px;height:20px}}
+@media(max-width:370px){.glass-nav .glass-link{width:40px;min-width:40px;min-height:44px}}

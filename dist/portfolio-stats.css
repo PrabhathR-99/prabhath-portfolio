@@ -1,0 +1,7 @@
+/* Open statistics strip inspired by the supplied reference. */
+.portfolio-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:clamp(20px,4vw,80px);row-gap:48px;width:100vw;margin:clamp(48px,6vw,88px) 0 0 calc(50% - 50vw);padding:clamp(48px,5vw,80px) max(24px,calc((100vw - 1440px)/2));background:radial-gradient(ellipse at 30% 0%,#152e3c 0%,transparent 65%),#101f2c;color:#d6d0c4}
+.portfolio-stat{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;min-width:0;gap:20px}
+.portfolio-stat dd{order:-1;margin:0;font-size:clamp(72px,8.8vw,144px);font-weight:300;line-height:1.08;letter-spacing:-.065em;font-variant-numeric:lining-nums tabular-nums}
+.portfolio-stat dt{margin:0;color:#ffa33d;font-size:clamp(14px,1.2vw,18px);font-weight:400;line-height:1.5;letter-spacing:.025em;text-transform:uppercase}
+@media(max-width:760px){.portfolio-stats{grid-template-columns:repeat(2,minmax(0,1fr));padding:44px 24px;column-gap:24px;row-gap:40px}.portfolio-stat{gap:12px}.portfolio-stat dd{font-size:clamp(64px,14vw,100px)}.portfolio-stat dt{font-size:14px}}
+@media(max-width:360px){.portfolio-stats{padding-inline:16px;column-gap:16px}.portfolio-stat dd{font-size:60px}.portfolio-stat dt{font-size:14px}}

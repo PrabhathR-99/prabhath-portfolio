@@ -1,0 +1,38 @@
+/* Large editorial hero with central portrait and a compact services column. */
+.portrait-hero{position:relative;isolation:isolate;background:#101f2c;color:#d6d0c4;min-height:max(780px,100svh);overflow:hidden}
+.portrait-hero:before{display:none}
+.portrait-hero-visual{position:absolute;inset:0;margin:0;z-index:-1;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 48%,#000000fa 54%,#000000eb 60%,#000000d6 66%,#000000b8 72%,#00000080 78%,#00000047 84%,#0000001f 90%,#00000008 96%,#0000 100%);mask-image:linear-gradient(90deg,#000 0%,#000 48%,#000000fa 54%,#000000eb 60%,#000000d6 66%,#000000b8 72%,#00000080 78%,#00000047 84%,#0000001f 90%,#00000008 96%,#0000 100%)}
+.portrait-hero-visual img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 38%}
+.portrait-hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#101f2cdd 0%,#101f2ca3 12%,#101f2c65 26%,#101f2c2e 38%,#101f2c0a 48%,#101f2c0f 62%,#101f2c14 78%,#101f2c24 100%),linear-gradient(0deg,#101f2cf2 0%,#101f2c80 28%,transparent 62%)}
+.portrait-hero-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,22%);gap:clamp(24px,3vw,64px);align-items:end;min-height:inherit;max-width:none;padding-top:max(340px,38svh);padding-bottom:clamp(48px,5svh,80px);position:relative;z-index:1}
+.portrait-hero-copy{min-width:0}
+.portrait-hero-eyebrow{font-size:clamp(14px,1.2vw,20px);color:#d6d0c4;letter-spacing:-.01em;margin-bottom:22px}
+.portrait-hero-name{display:inline-block;font-size:clamp(24px,2.65vw,46px);font-weight:400;line-height:1.2;letter-spacing:-.035em;text-decoration:none;margin-bottom:26px;transition:color .2s}
+.portrait-hero-name:hover{color:#ffa33d}
+.portrait-hero h1{font-size:clamp(80px,9.65vw,220px);font-weight:600;line-height:.9;letter-spacing:-1px;max-width:none;margin:0}
+.portrait-hero h1 span,.portrait-hero h1 em{display:block;white-space:nowrap}
+.portrait-hero h1 em{color:#ffa33d;font-style:normal;font-size:.95em;margin-top:.08em;letter-spacing:-1px}
+.portrait-hero-details{min-width:0;padding-bottom:3px}
+.portrait-hero-services{display:flex;flex-direction:column;gap:23px;padding:23px 0;border-block:1px solid #d6d0c445;list-style:none;margin:0}
+.portrait-hero-services li{display:flex;align-items:center;gap:13px;color:#d6d0c4;font-size:clamp(15px,1.28vw,22px);line-height:1.35}
+.portrait-hero-services svg{width:25px;height:25px;flex:none}
+.portrait-hero-contact{display:flex;align-items:center;justify-content:space-between;gap:18px;color:#ffa33d;padding:23px 0;border-bottom:1px solid #d6d0c445;font-size:clamp(15px,1.1vw,20px);text-transform:uppercase;letter-spacing:.025em;text-decoration:none}
+.portrait-hero-contact svg{width:38px;height:38px;flex:none;transition:transform .25s}
+.portrait-hero-contact:hover svg{transform:translate(3px,3px)}.portrait-hero-contact:hover{color:#ffb65d}
+.portrait-hero-bio{font-size:clamp(14px,1.12vw,19px);line-height:1.6;color:#b4b3ad;padding-top:22px}
+.portrait-hero-location{color:#b4b3ad;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-top:18px}
+.portrait-hero-scroll{position:absolute;left:var(--gutter);top:160px;display:flex;flex-direction:column;align-items:center;gap:16px;z-index:2;color:#d6d0c499;text-decoration:none;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.portrait-hero-scroll span{writing-mode:vertical-rl;transform:rotate(180deg)}.portrait-hero-scroll i{font-size:22px;transition:transform .25s}.portrait-hero-scroll:hover i{transform:translateY(4px)}
+@media(max-width:1100px) and (min-width:851px){.portrait-hero-inner{grid-template-columns:minmax(0,1fr) 225px;gap:24px}.portrait-hero h1{font-size:9vw}.portrait-hero-name{font-size:28px}.portrait-hero-services li{font-size:15px}.portrait-hero-bio{font-size:14px}}
+@media(max-width:850px){.portrait-hero{min-height:0}.portrait-hero-inner{grid-template-columns:1fr;gap:32px;min-height:0;padding-top:380px;padding-bottom:48px}.portrait-hero-visual{height:650px;-webkit-mask-image:none;mask-image:none}.portrait-hero-visual img{object-position:50% 35%}.portrait-hero-visual:after{background:linear-gradient(0deg,#101f2c 0%,#101f2cdd 20%,#101f2c20 58%,#101f2c40 100%),linear-gradient(90deg,#101f2c60,transparent 30%,transparent 70%,#101f2c60)}.portrait-hero-eyebrow{font-size:13px;margin-bottom:16px}.portrait-hero-name{font-size:clamp(23px,4.5vw,36px);margin-bottom:22px}.portrait-hero h1{font-size:11.5vw}.portrait-hero-details{max-width:none}.portrait-hero-services{gap:15px;padding-block:20px}.portrait-hero-services li{font-size:16px}.portrait-hero-contact{padding-block:18px;font-size:16px}.portrait-hero-contact svg{width:32px;height:32px}.portrait-hero-bio{font-size:15px;max-width:52ch;padding-top:20px}.portrait-hero-scroll{top:130px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.portrait-hero-name,.portrait-hero-contact svg,.portrait-hero-scroll i{transition:none}}
+
+/* Blur frames share the original crop; the base stays opaque during each crossfade. */
+.portrait-hero-visual .portrait-blur-frame{position:absolute;inset:0;opacity:0;pointer-events:none;will-change:opacity;transition:none}
+.portrait-hero-visual:after{z-index:6;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.portrait-hero-visual .portrait-blur-frame{display:none}}
+
+/* Keep the portrait in view through the full blur sequence, then release it. */
+.portrait-hero-scroll-track.is-pinned{height:calc(var(--hero-pin-height) + var(--hero-blur-travel) + var(--hero-blur-hold));position:relative;overflow:visible}
+.portrait-hero-scroll-track.is-pinned .portrait-hero{position:sticky;top:var(--hero-pin-top,0px)}
+@media(prefers-reduced-motion:reduce){.portrait-hero-scroll-track.is-pinned{height:auto}.portrait-hero-scroll-track.is-pinned .portrait-hero{position:relative;top:auto}}

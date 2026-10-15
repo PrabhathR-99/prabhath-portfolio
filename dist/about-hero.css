@@ -1,0 +1,39 @@
+/* Full-screen personal introduction above the career journey. */
+.about-photo-hero{position:relative;isolation:isolate;box-sizing:border-box;min-height:max(680px,100svh);display:flex;align-items:center;justify-content:center;padding:160px var(--ds-gutter) 144px;overflow:hidden;background:var(--ds-navy);color:#fff;text-align:center}
+.about-hero-photo{position:absolute;inset:0;z-index:-2;margin:0;background:var(--ds-navy)}
+.about-hero-photo img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 40%;animation:about-photo-drift 24s ease-in-out infinite alternate}
+.about-photo-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#101f2c38 0%,#101f2c99 42%,#101f2ca6 68%,#101f2c 100%)}
+.about-hero-copy{max-width:1420px;animation:about-copy-enter 1s cubic-bezier(.22,1,.36,1) both}
+.about-hero-eyebrow{font:500 clamp(16px,1.8vw,28px)/1.4 var(--f-sans);margin:0 0 28px;color:#fff}
+.about-hero-copy h1{font:600 clamp(48px,7.4vw,120px)/1 var(--f-heading);letter-spacing:-1.5px;text-transform:uppercase;text-wrap:balance;margin:0;text-shadow:0 2px 24px #08152530}
+.about-hero-copy h1 em{color:var(--ds-orange);font-style:normal}
+.about-hero-description{font:500 clamp(18px,2vw,28px)/1.4 var(--f-sans);max-width:40ch;margin:28px auto 0;color:#fff}
+.about-hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:16px;color:#fff;text-decoration:none;font:400 12px/1.4 var(--f-sans);text-transform:uppercase;letter-spacing:.06em;transition:color .25s}
+.about-hero-scroll svg{transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.about-hero-scroll:hover{color:var(--ds-orange)}
+.about-hero-scroll:hover svg{transform:translateY(6px)}
+.about-hero-scroll:focus-visible{outline:2px solid var(--ds-orange);outline-offset:8px;border-radius:8px}
+.about-history>.journey-heading{padding-top:var(--ds-section);scroll-margin-top:120px}
+@keyframes about-photo-drift{from{transform:scale(1)}to{transform:scale(1.035)}}
+@keyframes about-copy-enter{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(max-width:1024px){.about-hero-copy h1{font-size:80px;letter-spacing:-1px}}
+@media(max-width:767px){.about-photo-hero{min-height:100svh;padding:132px var(--ds-gutter) 136px}.about-hero-copy h1{font-size:clamp(38px,10vw,60px);letter-spacing:0}.about-hero-eyebrow{font-size:16px;margin-bottom:24px}.about-hero-description{font-size:18px;margin-top:24px;max-width:28ch}.about-hero-scroll{bottom:28px;font-size:10px}.about-hero-photo img{object-position:52% 40%}.about-history>.journey-heading{padding-top:var(--ds-section)}}
+@media(prefers-reduced-motion:reduce){.about-hero-photo img,.about-hero-copy{animation:none}.about-hero-scroll,.about-hero-scroll svg{transition:none}.about-hero-scroll:hover svg{transform:none}}
+
+/* Seven original photos: two frames per second, full compositions preserved. */
+.about-hero-photo[data-about-sequence]{overflow:hidden}
+.about-photo-frame{position:absolute;inset:0;opacity:0;transition:opacity 100ms linear;background:var(--ds-navy)}
+.about-photo-frame.is-active{opacity:1}
+.about-hero-photo .about-photo-frame img{position:absolute;inset:0;animation:none;transform:none}
+.about-hero-photo .about-photo-backdrop{object-fit:cover;filter:blur(24px);opacity:.45;scale:1.06}
+.about-hero-photo .about-photo-original{object-fit:contain;object-position:center}
+@media(prefers-reduced-motion:reduce){.about-photo-frame{transition:none}}
+
+/* The sharp hero stays pinned while the supplied motion-blur stages blend. */
+body[data-page=about]{overflow-x:clip}
+.about-hero-scroll-track{position:relative;overflow:visible}
+.about-hero-scroll-track.is-pinned{height:calc(var(--hero-pin-height) + var(--hero-blur-travel) + var(--hero-blur-hold))}
+.about-hero-scroll-track.is-pinned .about-photo-hero{position:sticky;top:var(--hero-pin-top,0px)}
+.about-photo-hero[data-about-motion] .about-hero-photo img{animation:none;transform:none}
+.about-hero-photo .about-blur-frame{position:absolute;inset:0;opacity:0;pointer-events:none;will-change:opacity;transition:none}
+@media(prefers-reduced-motion:reduce){.about-hero-scroll-track.is-pinned{height:auto}.about-hero-scroll-track.is-pinned .about-photo-hero{position:relative;top:auto}.about-hero-photo .about-blur-frame{display:none}}

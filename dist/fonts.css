@@ -1,0 +1,16 @@
+@font-face{font-family:'Nohemi';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/Nohemi-300.ttf') format('truetype')}
+@font-face{font-family:'Nohemi';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/Nohemi-400.ttf') format('truetype')}
+@font-face{font-family:'Nohemi';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/Nohemi-500.ttf') format('truetype')}
+@font-face{font-family:'Nohemi';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/Nohemi-600.ttf') format('truetype')}
+@font-face{font-family:'Nohemi';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/Nohemi-700.ttf') format('truetype')}
+@font-face{font-family:'Overused';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/Overused-300.otf') format('opentype')}
+@font-face{font-family:'Overused';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/Overused-400.otf') format('opentype')}
+@font-face{font-family:'Overused';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/Overused-500.otf') format('opentype')}
+@font-face{font-family:'Overused';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/Overused-600.otf') format('opentype')}
+@font-face{font-family:'Overused';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/Overused-700.otf') format('opentype')}
+/* Verified pairing from the reference site: Nohemi headings, Overused Grotesk text. */
+:root{--f-sans:'Overused',Arial,sans-serif;--f-heading:'Nohemi','Overused',sans-serif;--f-mono:'Overused',Arial,sans-serif}
+body{font-family:var(--f-sans);font-weight:500}
+h1,h2,h3,.h2,.h3{font-family:var(--f-heading);font-weight:600}
+.wk-head h2,.tl-head .h2,.ab-text .h2,.hw-text h3,.contact h2{font-family:var(--f-heading);font-weight:600}
+.portfolio-stat dd{font-family:var(--f-heading)}

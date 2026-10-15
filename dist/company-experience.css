@@ -1,0 +1,51 @@
+.company-experience{background:var(--ds-navy);color:#fff;padding:var(--ds-section) 0 40px}
+.company-heading{margin-bottom:56px}
+.company-heading>p{font:400 16px/1.4 var(--f-sans);text-transform:uppercase;letter-spacing:.4px;color:var(--ds-orange);margin:0 0 24px}
+.company-heading>h2{font:500 var(--ds-type-heading)/1 var(--f-heading);letter-spacing:-1.5px;text-transform:uppercase;margin:0;max-width:16ch}
+.company-heading em{font-style:normal;color:var(--ds-orange)}
+.company-row{border-bottom:1px solid #ffffff20}
+.company-row summary{display:flex;align-items:center;gap:24px;padding:32px 0;list-style:none;cursor:pointer}
+.company-row summary::-webkit-details-marker{display:none}
+.company-mark{width:80px;height:80px;display:grid;place-items:center;flex-shrink:0;border-radius:16px;background:#ffffff0c;box-shadow:inset 0 1px 0 #ffffff15;font:600 24px/1 var(--f-heading);color:var(--ds-orange)}
+.company-mark:has(img){background:#fff}
+.company-mark img{display:block;width:68px;height:auto;object-fit:contain}
+.company-summary{display:flex;flex-direction:column;gap:8px;flex:1}
+.company-summary strong{font:500 28px/1.15 var(--f-heading);letter-spacing:-.5px;color:#fff;transition:color .25s}
+.company-summary>span{font:500 18px/1.4 var(--f-sans);color:#d6d0c4}
+.company-period{font:500 14px/1.2 var(--f-sans);white-space:nowrap;border:1px solid #ffffff30;border-radius:999px;padding:10px 16px;color:#d6d0c4}
+.company-chevron{flex-shrink:0;transition:transform .3s,color .3s}
+.company-row summary:hover .company-summary strong,.company-row summary:hover .company-chevron{color:var(--ds-orange)}
+.company-row summary:focus-visible{outline:2px solid var(--ds-orange);outline-offset:6px;border-radius:8px}
+.company-row[open] .company-chevron{transform:rotate(180deg);color:var(--ds-orange)}
+.company-content{padding:0 48px 36px 104px;max-width:1100px;animation:company-open .35s ease}
+.company-content p{font:500 var(--ds-type-body)/var(--ds-line-body) var(--f-sans);color:#d6d0c4;max-width:65ch;margin:0 0 24px}
+.company-content .company-location{font-size:14px;color:#d6d0c4}
+.company-role-history{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:32px 0}
+.company-role-history h3{font:500 26px/1.15 var(--f-heading);margin:0 0 12px}
+.company-role-history .company-role-date{font-size:14px;color:var(--ds-orange);margin-bottom:16px}
+.company-website{display:inline-flex;gap:12px;align-items:center;min-height:48px;padding:14px 24px;border:1px solid var(--ds-button-bg);border-radius:var(--ds-button-radius);font:600 16px/1.25 var(--f-sans);color:var(--ds-button-bg);text-decoration:none;transition:background .25s,transform .25s}
+.company-website:hover{background:#ffb65d15;transform:translateY(-2px)}
+.company-letter-preview{display:flex;align-items:center;text-align:left;gap:24px;padding:16px;margin:0 0 28px;border:0;border-radius:8px;background:#ffffff0a;color:#fff;cursor:pointer;font-family:var(--f-sans);transition:background .3s,transform .3s}
+.company-letter-preview>img{width:100px;height:134px;object-fit:contain;background:#fff;border-radius:4px}
+.company-letter-preview>span{display:flex;flex-direction:column;gap:8px}
+.company-letter-preview strong{font:500 24px/1.2 var(--f-heading)}
+.company-letter-preview span span{font-size:14px;color:#d6d0c4}
+.company-letter-preview .company-letter-hint{color:var(--ds-orange)}
+.company-letter-preview:hover{background:#ffffff15;transform:translateY(-2px)}
+.company-letter-preview:focus-visible,.company-website:focus-visible{outline:2px solid var(--ds-orange);outline-offset:4px}
+.company-letter-dialog{box-sizing:border-box;width:min(1100px,calc(100vw - 32px));height:90svh;max-height:90svh;border:0;border-radius:16px;padding:24px;background:#fff;color:var(--ds-navy);box-shadow:0 20px 80px #0005}
+.company-letter-dialog[open]{display:flex;flex-direction:column;gap:16px}
+.company-letter-dialog::backdrop{background:#081525df;backdrop-filter:blur(12px)}
+.letter-viewer-toolbar{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-shrink:0}
+.letter-viewer-toolbar h2{font:500 24px/1.2 var(--f-heading);margin:0}
+.letter-viewer-controls{display:flex;align-items:center;gap:8px}
+.letter-viewer-controls button{border:0;border-radius:12px;padding:10px 14px;min-height:44px;min-width:44px;background:var(--ds-button-bg);color:var(--ds-navy);font:600 16px/1.2 var(--f-sans);cursor:pointer;transition:background .2s}
+.letter-viewer-controls button:hover{background:var(--ds-button-hover)}
+.letter-viewer-controls button:disabled{opacity:.45;cursor:default}
+.letter-viewer-controls output{font:500 14px/1.2 var(--f-sans);width:44px;text-align:center}
+.letter-viewer-area{flex:1;min-height:0;overflow:auto;background:#e9ebed;border-radius:8px;padding:20px;overscroll-behavior:contain;box-sizing:border-box}
+.letter-viewer-area img{display:block;width:var(--letter-width,100%);max-width:none;height:auto;margin:auto;box-shadow:0 4px 20px #101f2c18}
+.letter-viewer-help{font:500 12px/1.4 var(--f-sans);color:#52616b;margin:0}
+@keyframes company-open{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media(max-width:767px){.company-heading{margin-bottom:32px}.company-heading>p{font-size:14px}.company-heading>h2{letter-spacing:0}.company-row summary{display:grid;grid-template-columns:56px 1fr 20px;gap:16px;padding:24px 0}.company-mark{width:56px;height:56px;border-radius:12px;font-size:20px;grid-row:1/3}.company-mark img{width:48px}.company-summary strong{font-size:22px}.company-summary>span{font-size:14px}.company-period{grid-column:2;grid-row:2;width:max-content;font-size:12px;padding:8px 12px}.company-chevron{grid-column:3;grid-row:1/3;width:20px}.company-content{padding:0 0 28px 0}.company-role-history{grid-template-columns:1fr;gap:16px}.company-role-history h3{font-size:22px}.company-letter-preview{width:100%;gap:16px}.company-letter-preview strong{font-size:20px}.company-letter-preview>img{width:80px;height:108px}.company-letter-dialog{padding:16px}.letter-viewer-toolbar{flex-wrap:wrap;gap:16px}.letter-viewer-toolbar h2{font-size:20px}.letter-viewer-controls{width:100%;justify-content:space-between}.letter-viewer-area{padding:12px}}
+@media(prefers-reduced-motion:reduce){.company-content{animation:none}.company-chevron,.company-summary strong,.company-website,.company-letter-preview,.letter-viewer-controls button{transition:none}.company-website:hover,.company-letter-preview:hover{transform:none}}

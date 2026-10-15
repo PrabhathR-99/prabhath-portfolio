@@ -1,0 +1,14 @@
+.about-resume{background:var(--ds-navy);color:#fff;padding:var(--ds-section) 0;text-align:center;scroll-margin-top:112px}
+.about-resume-content{display:flex;flex-direction:column;align-items:center}
+.about-resume-eyebrow{font:400 16px/1.4 var(--f-sans);letter-spacing:.4px;text-transform:uppercase;color:var(--ds-orange);margin:0 0 24px}
+.about-resume h2{font:500 var(--ds-type-heading)/1 var(--f-heading);letter-spacing:-1.5px;text-transform:uppercase;margin:0 0 40px}
+.about-resume h2 em{font-style:normal;color:var(--ds-orange)}
+.about-resume-lead{font:500 clamp(22px,2.4vw,36px)/1.3 var(--f-sans);max-width:34ch;margin:0 0 24px;text-wrap:balance}
+.about-resume-description{font:400 var(--ds-type-body)/1.6 var(--f-sans);max-width:64ch;color:#d6d0c4;margin:0 0 40px}
+.about-resume-button{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:56px;padding:16px 28px;border:0;border-radius:var(--ds-button-radius);background:var(--ds-button-bg);color:var(--ds-navy);font:600 16px/1.25 var(--f-sans);transition:background .25s,transform .25s}
+.about-resume-button:disabled{cursor:not-allowed;opacity:.65}
+.about-resume-button:not(:disabled):hover{background:var(--ds-button-hover);transform:translateY(-2px)}
+.about-resume-status{font:400 14px/1.5 var(--f-sans);color:#d6d0c4;margin:16px 0 0}
+@media(max-width:767px){.about-resume h2{letter-spacing:0;margin-bottom:28px}.about-resume-eyebrow{font-size:14px}.about-resume-lead{font-size:22px}.about-resume-description{margin-bottom:32px}.about-resume-button{font-size:14px;min-height:48px;padding:14px 24px}}
+@media(prefers-reduced-motion:reduce){.about-resume-button{transition:none}.about-resume-button:not(:disabled):hover{transform:none}}
+.about-resume-button{text-decoration:none;cursor:pointer}
